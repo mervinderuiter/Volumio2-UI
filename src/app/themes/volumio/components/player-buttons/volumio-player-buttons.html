@@ -2,7 +2,7 @@
   <button
       ng-if="!playerButtons.playerService.state.enableSkip"
       ng-click="playerButtons.playerService.prev()"
-      class="btn btn-link"
+      class="btn btn-link skip"
       title="{{'BROWSER.PREVIOUS_TRACK' | translate}}"
       ng-disabled="playerButtons.playerService.state.disableUi">
     <i class="fa fa-step-backward"></i>
@@ -10,7 +10,7 @@
   <button
       ng-if="playerButtons.playerService.state.enableSkip"
       ng-click="playerButtons.playerService.skipBackwards()"
-      class="btn btn-link"
+      class="btn btn-link skip"
       title="{{'BROWSER.SKIP_BACKWARDS' | translate}}"
       ng-disabled="playerButtons.playerService.state.disableUi">
     <i class="fa fa-backward"> 15</i>
@@ -59,7 +59,7 @@
   <button
       ng-if="!playerButtons.playerService.state.enableSkip"
       ng-click="playerButtons.playerService.next()"
-      class="btn btn-link"
+      class="btn btn-link skip"
       title="{{'BROWSER.NEXT_TRACK' | translate}}"
       ng-disabled="playerButtons.playerService.state.disableUi">
     <i class="fa fa-step-forward"></i>
@@ -67,7 +67,7 @@
   <button
       ng-if="playerButtons.playerService.state.enableSkip"
       ng-click="playerButtons.playerService.skipForward()"
-      class="btn btn-link"
+      class="btn btn-link skip"
       title="{{'BROWSER.SKIP_FORWARD' | translate}}"
       ng-disabled="playerButtons.playerService.state.disableUi">
     15 <i class="fa fa-forward"></i>

@@ -30,12 +30,6 @@
   </button>
 
   <div id="menuList" role="group" ng-if="sideMenu.visible">
-    <button
-        id="closeMenuBtn"
-        ng-click="sideMenu.toggleMenu()"
-        class="btn btn-link">
-      <i class="fa fa-times"></i>
-    </button>
 
     <div ng-if="sideMenu.isAuthActive() && sideMenu.isMyVolumioVisible()" id="myvolumio-card-container">
       <my-volumio-user-card action-callback="sideMenu.toggleMenu()">

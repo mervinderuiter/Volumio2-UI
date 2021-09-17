@@ -47,6 +47,7 @@ import PlayerButtonsDirective from './components/player-buttons/player-buttons.d
 import VolumeManagerDirective from './components/volume-manager/volume-manager.directive';
 import TrackManagerDirective from './components/track-manager/track-manager.directive';
 import TrackInfoDirective from './components/track-info/track-info.directive';
+import TrackInfoArtDirective from './components/track-info-art/track-info-art.directive';
 import PlayerStatusDirective from './components/player-status/player-status.directive';
 import SideMenuDirective from './components/side-menu/side-menu.directive';
 import AudioOutputsDirective from './components/audio-outputs/audio-outputs.directive';
@@ -255,6 +256,7 @@ angular.module('volumio', [
   .directive('volumeManager', (themeManager) => new VolumeManagerDirective(themeManager))
   .directive('trackManager', (themeManager, $log) => new TrackManagerDirective(themeManager, $log))
   .directive('trackInfo', (themeManager) => new TrackInfoDirective(themeManager))
+  .directive('trackInfoArt', (themeManager) => new TrackInfoArtDirective(themeManager))
   .directive('playerStatus', () => new PlayerStatusDirective())
   .directive('sideMenu', () => new SideMenuDirective())
   .directive('audioOutputs', () => new AudioOutputsDirective())

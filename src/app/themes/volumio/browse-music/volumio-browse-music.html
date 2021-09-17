@@ -6,30 +6,49 @@
 
         <div  ng-if="!browse.isDedicatedSearchView" id="browsePanelHeading" class="panel-heading browse-header">
 
-          <div class="navButtons pull-left"
+          <!-- <div class="navButtons pull-left"
                ng-include src="'app/browse/components/browse-nav-buttons.html'">
-          </div>
+          </div> -->
+
+        <button
+            class="btn-link backButton"
+            ng-click="browse.goBack()"
+            title="{{'COMMON.BACK' | translate}}">
+          <i class="fa fa-arrow-left"></i>
+        </button>
 
           <div class="searchBox"
                ng-include src="'app/browse/components/browse-search-box.html'">
           </div>
+          
+          <div id="filterBox" >
+                      <button
+              class="btn-link gridButton"
+              ng-click="browse.toggleGridView()"
+              ng-if="browse.browseService.showGridViewSelector"
+              title="{{((browse.browseService.showGridView) ? 'COMMON.LIST': 'COMMON.GRID') | translate}}">
+                <i ng-if="browse.browseService.showGridView" class="fa fa-list"></i>
+                <i ng-if="!browse.browseService.showGridView" class="fa fa-th"></i>
+            </button>
+            
+            <div id="listShortcuts" class="shortcuts"></div>
+          </div>
 
           <div class="clearfix"></div>
+          
         </div>
+        
 
       </div>
 
-        <div class="dedicated-search-container" ng-if="browse.isDedicatedSearchView">
-          <div class="dedicated-search"
-               ng-include src="'app/browse/components/browse-search-box.html'">
-          </div>
-        </div> <!-- /.dedicated-search-container -->
+      
 
+       
 
-      <div class="dedicated-search-container-flow-space" ng-if="browse.isDedicatedSearchView"></div>
 
       <div class="body-content new-browse" ng-class="{ 'with-search-header': browse.isDedicatedSearchView }">
 
+        
         <div id="browseTablesWrapper">
 
           <div

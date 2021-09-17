@@ -1,7 +1,7 @@
 @import "./assets/variants/load-variant";
 
-$headerHeight: 50px;
-$footerHeight: 50px;
+$headerHeight: 120px;
+$footerHeight: 120px;
 
 
 // BOOTSTRAP VARIABLES CUSTOMISATIONS
@@ -154,15 +154,15 @@ body {
   height: 100vh;
   width: 100%;
   background: #333;
+  
 }
 
 #contentWrapper {
   @include make-row();
   width: 100%;
   position: fixed;
-  z-index: 1;
-  top: $headerHeight;
-  bottom: $footerHeight;
+  top: 0;
+  bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -182,6 +182,14 @@ body {
   }
 }
 
+#blurContainer {
+  background-color: #0000007e;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 #footer {
   > button {
     text-transform: uppercase;
@@ -191,7 +199,6 @@ body {
 
 .btn {
   outline: none !important;
-  border-radius: 0;
   font-size: 16px;
   &.selected {
     // background-color: $theme-primary-color !important;
@@ -211,6 +218,7 @@ body {
     // }
     color: $theme-footer-link-color;
     background-color: transparent;
+    border-radius: 10px;
     &.selected {
       color: $theme-footer-link-hover-color;
       background-color: $theme-footer-link-selected-background-color;
@@ -252,6 +260,19 @@ body {
   background-color: darken($theme-accent-color, 5%);
   color: $theme-light-color;
   border-color: $theme-light-color;
+}
+
+.closeBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: none;
+  font-size: 28px;
+  border-radius: 25px;
+  background: transparent;
+  img {
+    width:20px;
+  }
 }
 
 //Table
@@ -349,9 +370,17 @@ table {
   margin-top: 20px;
   .panel-body {
     background-color: $theme-transparent-background;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   .panel-heading {
-    border-bottom: solid 1px $theme-primary-color;
+    //border-bottom: solid 1px $theme-primary-color;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     .panel-title {
       color: #FFF;
       font-size: 18px;
@@ -409,8 +438,7 @@ table {
 
 //Switch override
 .bootstrap-switch {
-  border-color: $theme-primary-color;
-  border-radius: 0;
+  border-color: $theme-primary-color;  
 }
 .bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label,
   .bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label {
@@ -436,7 +464,7 @@ table {
 
 //Form override
 .form-control {
-  border-radius: 0;
+  border-radius: 7px;
   &:focus {
     box-shadow: 0 0 5px 1px $theme-primary-color;
   }
@@ -550,9 +578,9 @@ li.list-group-item {
 
 //Slder
 .slider-track {
-  border: solid 1px #555;
-  height: 30px;
-  background-image: linear-gradient(to top, $theme-primary-color 0%, $theme-primary-color 100%);
+  //border: solid 1px #555;
+  height: 5px;
+  //background-image: linear-gradient(to top, $theme-primary-color 0%, $theme-primary-color 100%);
 }
 .slider-selection {
   background-image: linear-gradient(to bottom, #CCC  0%, #CCC  100%)
@@ -787,4 +815,14 @@ p.lead {
   margin-right: auto;
   white-space: normal;
   margin-top: 20px;
+}
+
+#browse {
+  .panel {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: $theme-dark-transparent-background;    
+    border-radius: 10px;
+  }
 }

@@ -666,10 +666,26 @@ class BrowseMusicController {
     page.style.display = 'none';
     page.innerHTML = html.join('');
 
+    const filters = document.getElementById('listShortcuts');
+    if (filters) {
+      const filterHtml = lists.map((list) => this.renderFilter(list));
+      //filters.style.display = 'none';
+      filters.innerHTML = filterHtml.join('');
+    }
+
+
     this.$timeout(() => {
       this.$rootScope.$broadcast('browseController:listRendered');
       page.style.display = 'block';
     }, 0, false);
+  }
+
+  renderFilter(list, listIndex) {
+    if (list.title){
+      let html = `<a href="#${ list.title ? list.title.replace(' ', '_').toUpperCase() : ''}" class="shortcut">${list.title}</a>`;
+      return html;
+    }
+    return '';
   }
 
   renderList(list, listIndex) {
@@ -684,7 +700,7 @@ class BrowseMusicController {
 
     const html = `
     <div
-      class="main__source">
+      class="main__source" id="${ list.title ? list.title.replace(' ', '_').toUpperCase() : ''}">
       <h3 class="main__source__title panel-title ${ !list.title ? 'hidden' : '' }">${ list.title || '' }</h3>
       <div class="${showGridView && canShowGridView ? 'main__row' : 'main__list'}">
         ${ items }

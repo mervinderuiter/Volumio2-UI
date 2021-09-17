@@ -2,7 +2,7 @@
   @include make-xs-column(24);
   .pluginDescription{
     margin-top: 10px;
-  }
+  }  
 
   .form-group {
     margin-bottom: 30px;
@@ -46,10 +46,10 @@
     margin-top: 10px;
   }
   h2 {
-    background-color: $theme-dark-transparent-background;
+    //background-color: $theme-dark-transparent-background;
     padding: 6px 10px;
     display: inline-block;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 300;
     margin-bottom: 0px;
     text-transform: capitalize;

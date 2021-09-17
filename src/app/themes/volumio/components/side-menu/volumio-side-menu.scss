@@ -1,14 +1,12 @@
 $sideMenuWidth: 230px;
 #sideMenu{
-  position: relative;
+  position: fixed;
+  top: 15px;
+  left: 15px;
   // border: solid 1px red;
-  height: $headerHeight;
-  @include make-sm-column(6);
-  @include make-xs-column(4, 0);
   text-align: right;
-  z-index: 2;
-  @include breakpoint(xs) {
-    text-align: center;
+  .fa {
+    font-size: 25px;
   }
   #openMenuBtn {
     color: $theme-link-color;
@@ -21,9 +19,9 @@ $sideMenuWidth: 230px;
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 0;
-    width: $sideMenuWidth;
-    padding: 10px 10px 0px 10px;
+    left: 0;
+    width: 300px;
+    padding: 50px 10px 0px 10px;
     background-color: $theme-sidebar-background-color;
     overflow-y: scroll;
     button {
@@ -58,8 +56,8 @@ $sideMenuWidth: 230px;
       width: auto;
       border-bottom: none;
       background-color: none;
-      top: 10px;
-      right: 20px;
+      top: 0px;
+      left: 260px;
       @include breakpoint(xs) {
         top: auto;
         bottom: 0px;

@@ -1,14 +1,12 @@
 $trackInfoBarButtonsHeight: 35px;
 #playQueue {
+  padding-top: 30px;
   .trackInfoBarButtons {
-    height: $trackInfoBarButtonsHeight;
-    text-align: right;
-    @include breakpoint('xs') {
-      text-align: center;
-      button {
-        padding: 0px 18px;
-        font-size: 24px;
-      }
+    height: $trackInfoBarButtonsHeight;    
+    text-align: center;
+    button {
+      padding: 0px 18px;
+      font-size: 24px;
     }
   }
 
@@ -20,7 +18,9 @@ $trackInfoBarButtonsHeight: 35px;
     position: relative;
     overflow: auto;
     // height: 100%;
-    height: calc(100vh - #{$headerHeight} - #{$footerHeight} - #{$trackInfoBarButtonsHeight});
+    height: calc(100vh - 100px);
+    padding-left:20px;
+    padding-right:20px;
 
     ul {
       padding: 0;

@@ -1,8 +1,11 @@
-<div id="playQueue">
-  <track-info-bar ng-if="!playQueue.matchmediaService.isPhone"></track-info-bar>
-  <track-info-bar-buttons ng-if="playQueue.matchmediaService.isPhone"></track-info-bar-buttons>
+<div id="browse" class="boxTable" browse-scroll-manager>
+<div class="panel panel-default">
+  <div id="playQueue">
+    <track-info-bar-buttons></track-info-bar-buttons>
 
-  <div id="playQueueList">
-    <ul></ul>
+    <div id="playQueueList">
+      <ul></ul>
+    </div>
   </div>
+</div>
 </div>

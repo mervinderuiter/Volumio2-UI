@@ -1,0 +1,13 @@
+<div id="trackInfoArt">
+  <div ng-if="trackInfoArt.playerService.state.albumart">
+    <img
+        ng-if="trackInfoArt.playerService.state.albumart"
+        ng-src="{{trackInfoArt.playerService.albumart}}"
+        alt="{{trackInfoArt.playerService.state.album}}"/>
+    <i
+        ng-if="trackInfoArt.playerService.state.icon"
+        ng-class="trackInfoArt.playerService.state.icon">
+    </i>
+  </div>
+</div>
+<div class="clearfix"></div>

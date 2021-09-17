@@ -9,12 +9,26 @@
   #leftPanel, #rightPanel {
     // position: relative;
     text-align: center;
-    @include make-sm-column(8);
+    @include make-sm-column(12);
     @include breakpoint(xs) {
-      height: calc(100vh - 100px);
+      //height: calc(100vh - 100px);
     }
   }
   #centerPanel {
-    @include make-sm-column(8);
+    @include make-sm-column(12);
+  }
+  .searchBtn {
+    position: fixed;
+    bottom: 150px;
+    height: 50px;
+    width: 50px;
+    right: 30px;
+    border: none;
+    font-size: 24px;
+    border-radius: 25px;
+    background-color: rgba(143, 143, 143, 0.555);
+    img {
+      width:20px;
+    }
   }
 }

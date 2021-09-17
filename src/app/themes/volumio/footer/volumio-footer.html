@@ -1,16 +1,14 @@
-<div ng-if="footer.isSocketReady" class="footerContent">
-  <ng-include
-    src="'app/themes/volumio/partials/volumio-tab-bar.html'"
-    ng-if="!footer.matchmediaService.isPhone">
-  </ng-include>
-  <div ng-if="footer.matchmediaService.isPhone" id="phoneFooter">
-
-    <div>
-      <volume-manager type="slider"></volume-manager>
-
-      <player-buttons></player-buttons>
-    </div>
-
-    <side-menu></side-menu>
-  </div>
+<div class="footerContent"> 
+  <player-seekbar></player-seekbar>
+  <player-buttons></player-buttons>
+  <side-menu></side-menu>
+  <volume-manager type="slider"></volume-manager>
+  <button
+      ui-sref="volumio.play-queue"
+      class="btn btn-link queueBtn"
+      ng-mouseenter="hover = 'queue'"
+      ng-mouseleave="hover = ''"
+      ng-class="{selected: state.current.name === 'volumio.play-queue'}">
+    <img ng-src="{{variantAssetsUrl}}/icons/queue{{(hover === 'queue' || state.current.name === 'volumio.play-queue')?'-selected':''}}.svg" alt="{{'COMMON.TAB_QUEUE' | translate}}"/>
+  </button>
 </div>

@@ -358,6 +358,7 @@ class PlayerService {
     this.socketService.on('pushState', (data) => {
       this.$log.debug('pushState', data);
       this.state = data;
+      this.setBackground(this.state.albumart);
       this.state.disableUi = this.state.disableUiControls || this.state.service === 'analogin';
 
       this.elapsedTime = this.state.seek;
@@ -405,6 +406,11 @@ class PlayerService {
       this.$log.debug('urifavourites', data);
       this.favourite = data;
     });
+  }
+
+  setBackground(albumart) {
+    this.$document[0].body.style.background = `#333 url(${albumart}) no-repeat center center`;
+    this.$document[0].body.style.backgroundSize = 'cover';
   }
 
   initService() {
