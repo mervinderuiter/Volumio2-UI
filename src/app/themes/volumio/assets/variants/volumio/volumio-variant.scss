@@ -1,7 +1,7 @@
 // COLORS
-$theme-primary-color: #54C688;
+$theme-primary-color: #68c28d;
 $theme-accent-color: #333;
-$theme-danger-color: #DF4649;
+$theme-danger-color: #DF4649; 
 $theme-light-color: #7a848e;
 $theme-dark-color: #3C3C3C;
 $theme-darker-color: #090909;
@@ -18,18 +18,18 @@ $theme-playbtn-gradient: linear-gradient(top, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 
   rgba(0, 0, 0, 0.6) 100%);
 $theme-table-border-color: #7C7C7C;
 
-$theme-text-color: #FFF;
+$theme-text-color: rgba(255, 255, 255, 0.85);
 $theme-dark-text-color: #AAA;
 $theme-darker-text-color: #999;
 
-$theme-link-color: white;
+$theme-link-color: rgba(255, 255, 255, 0.85);
 $theme-link-hover-color: $theme-primary-color;
 $theme-footer-link-color: white;
 $theme-footer-link-selected-background-color: $theme-accent-color;
 $theme-footer-link-hover-color: white;
 $theme-link-playback-color: $theme-primary-color;
 
-$theme-sidebar-background-color: rgba(30, 30, 30, 0.95);
+$theme-sidebar-background-color: rgba(27, 27, 27, 0.815);
 
 $body-bg: transparent;
 $brand-primary: #222;

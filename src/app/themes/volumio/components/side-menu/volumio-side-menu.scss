@@ -20,20 +20,21 @@ $sideMenuWidth: 230px;
     top: 0;
     bottom: 0;
     left: 0;
-    width: 300px;
+    width: 250px;
     padding: 50px 10px 0px 10px;
-    background-color: $theme-sidebar-background-color;
+    background-color: rgba(0, 0, 0, 0.9);
     overflow-y: scroll;
     button {
-      text-transform: uppercase;
       text-align: left;
       font-size: 18px;
       // color: #FFF;
       padding: 10px 0px 10px 5px;
-      border-bottom: solid 1px #333;
+      padding-left: 20px;
+      //border-bottom: solid 1px rgba(51, 51, 51, 0.829);
       &:hover {
         // color: $theme-primary-color;
-        border-bottom: solid 1px #333;
+        //border-bottom: solid 1px #333;
+        background-color: rgb(24, 24, 24);
       }
     }
     &.ng-enter, &.ng-leave {
