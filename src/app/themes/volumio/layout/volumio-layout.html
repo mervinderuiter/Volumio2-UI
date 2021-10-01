@@ -9,6 +9,7 @@
       <div id="content" ng-class="state.current.url" ui-view="content"></div>
     </div>
     <footer ng-if="state.current.url === 'playback'" id="footer" ui-view="footer"></footer>
+    <minifooter ng-if="state.current.url != 'playback'" id="minifooter" ui-view="minifooter"></minifooter>
     <button ng-if="state.current.url != 'playback'"
       ui-sref="volumio.playback"
       ng-mouseenter="hover = 'browse'"
