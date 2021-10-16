@@ -1,9 +1,12 @@
-<div class="footerContent"> 
+<div class="footerContent">   
   <player-seekbar></player-seekbar>
+  <track-info-art ng-if="state.current.url != 'playback'"></track-info-art>
+  <track-info ng-if="state.current.url != 'playback'"></track-info>
   <player-buttons></player-buttons>
-  <side-menu></side-menu>
-  <volume-manager type="slider"></volume-manager>
+  <side-menu ng-if="state.current.url === 'playback'"></side-menu>
+  <volume-manager type="slider" ng-if="state.current.url === 'playback'"></volume-manager>
   <button
+      ng-if="state.current.url === 'playback'"
       ui-sref="volumio.play-queue"
       class="btn btn-link queueBtn"
       ng-mouseenter="hover = 'queue'"

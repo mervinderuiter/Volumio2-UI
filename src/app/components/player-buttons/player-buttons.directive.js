@@ -16,9 +16,10 @@ class PlayerButtonsDirective {
 }
 
 class PlayerButtonsController {
-  constructor($scope, playerService) {
+  constructor($scope, playerService, $state) {
     'ngInject';
     this.$scope = $scope;
+    this.state = $state;
     this.playerService = playerService;
 
     this.isInFooter = this.$scope.isInFooter || false;

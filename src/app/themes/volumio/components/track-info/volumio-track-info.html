@@ -1,12 +1,25 @@
-<div id="trackInfo">
-  <div id="trackDetails">
-    <div id="trackInfo-title" ng-if="trackInfo.playerService.state.title" title="{{'COMMON.SONG' | translate}}">
+<div id="trackInfo" ng-class="{'mini': trackInfo.state.current.url != 'playback'}">
+  <div id="trackDetails" ng-class="{'mini': trackInfo.state.current.url != 'playback'}">
+    <div id="trackInfo-title" ng-class="{'mini': trackInfo.state.current.url != 'playback'}" ng-if="trackInfo.playerService.state.title" title="{{'COMMON.SONG' | translate}}">
       {{trackInfo.playerService.state.title}}
     </div>
     <br/>
-    <div id="trackInfo-artist" ng-if="trackInfo.playerService.state.artist" title="{{'COMMON.ARTIST' | translate}}">
+    <div id="trackInfo-artist" ng-class="{'mini': trackInfo.state.current.url != 'playback'}" ng-if="trackInfo.playerService.state.artist" title="{{'COMMON.ARTIST' | translate}}">
       {{trackInfo.playerService.state.artist}} - {{trackInfo.playerService.state.album}}
     </div>
+    
+    <div id="trackInfo-samplerate" ng-class="{'mini': trackInfo.state.current.url != 'playback'}" ng-if="trackInfo.playerService.state.artist" title="{{'COMMON.ARTIST' | translate}}">
+      <img
+      ng-if="trackInfo.playerService.state.fileFormat"
+      ng-src="{{'/app/assets-common/format-icons/' +
+      trackInfo.playerService.state.fileFormat.url + '.svg'}}"
+      alt="{{trackInfo.playerService.state.fileFormat.name}}" />
+      <span ng-if="!trackInfo.playerService.state.fileFormat">
+        {{trackInfo.playerService.state.trackType}}
+      </span>
+      <span>{{trackInfo.playerService.state.samplerate}} {{trackInfo.playerService.state.bitdepth}}</span>
+      
+    </div>    
   </div>
 </div>
-<div class="clearfix"></div>
+

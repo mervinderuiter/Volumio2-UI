@@ -46,11 +46,6 @@ function routerConfig($stateProvider, $urlRouterProvider, $locationProvider, the
           templateUrl: themeManagerProvider.getHtmlPath('footer'),
           controller: 'FooterController',
           controllerAs: 'footer'
-        },
-        'minifooter@volumio': {
-          templateUrl: themeManagerProvider.getHtmlPath('minifooter'),
-          controller: 'FooterController',
-          controllerAs: 'footer'
         }
       },
       resolve: {

@@ -1,3 +1,48 @@
+#playerButtons.mini {
+
+  height: 80px;
+  text-align: left;
+  width: 75px;
+  float: left;
+  display: block;
+  .fa {
+    margin-left: 1px;
+    margin-top: 1px;
+    font-size: 20px;
+  }
+
+  .skip {
+    float: left;
+    display: block;
+    margin-top: 0px;
+    height: 80px;
+    width: 25px;
+    padding: 0px;
+    padding-top: 6px;
+  }
+
+  .playPauseBtnWrapper {
+    float: left;
+    position: unset;
+    display: block;
+    width: 40px;
+    height: 80px;
+    padding-top: 25px;
+  }
+  .playPauseBtnGreyWrapper {
+    height: 25px;
+    position: unset;
+  }
+  .playPause {
+    float:left;
+    position: unset;
+    margin: 0px;
+    border: none;
+    height: 25px;
+    width: 25px;
+  }
+}
+
 #playerButtons {
 
   height: 80px;

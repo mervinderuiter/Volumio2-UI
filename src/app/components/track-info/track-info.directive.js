@@ -16,10 +16,11 @@ class TrackInfoDirective {
 }
 
 class TrackInfoController {
-  constructor($scope, playerService) {
+  constructor($scope, playerService, $state) {
     'ngInject';
     this.$scope = $scope;
     this.playerService = playerService;
+    this.state = $state;
 
     this.isInFooter = this.$scope.isInFooter || false;
   }

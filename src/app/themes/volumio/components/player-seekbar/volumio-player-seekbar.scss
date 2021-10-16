@@ -1,4 +1,40 @@
-.player-seekbar{
+#playerSeekbar.mini{
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+  height: 4px;
+  .slider-handle{
+    display: none;
+    margin-left:0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    height: 0px;
+  }
+  .slider-track{
+    height: 4px !important;
+    background: transparent !important;
+    background-color:rgba(255, 255, 255, 0.349) !important;
+  }
+  .slider-track-high{
+    //background-color: $theme-dark-grey;
+    background-image: none;
+    border-radius: 0px !important;
+  }
+  .slider-selection{
+    //background-image: $theme-slider-bar-full-gradient;
+    border-radius: 0px !important;
+    border: 0px !important;
+  }
+  .slider{
+    height:10px;
+  }
+}
+
+#playerSeekbar{
 
   margin-left:50px;
   margin-right: 50px;
@@ -15,8 +51,6 @@
     margin-bottom: 6px;
   }
 
-
-  
     line-height: 0px;
     padding-top: 6px;
     .slider-track{
@@ -73,9 +107,6 @@
         }
       }
     }
-
-  
-
 }
 
 .seekbar-times{
