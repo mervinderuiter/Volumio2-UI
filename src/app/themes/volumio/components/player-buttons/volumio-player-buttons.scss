@@ -2,23 +2,39 @@
 
   height: 80px;
   text-align: left;
-  width: 75px;
+  width: 100px;
   float: left;
   display: block;
+  @include breakpoint(xs) {
+    width: 75px;
+  };
   .fa {
     margin-left: 1px;
     margin-top: 1px;
     font-size: 20px;
   }
 
-  .skip {
+  .skip-forward {
     float: left;
     display: block;
     margin-top: 0px;
     height: 80px;
     width: 25px;
     padding: 0px;
-    padding-top: 6px;
+    padding-top: 10px;
+  }
+
+  .skip-backward {
+    float: left;
+    display: block;
+    margin-top: 0px;
+    height: 80px;
+    width: 25px;
+    padding: 0px;
+    padding-top: 10px;
+    @include breakpoint(xs) {
+      display:none;
+    };
   }
 
   .playPauseBtnWrapper {
@@ -54,7 +70,10 @@
     font-size: 25px;
   }
 
-  .skip {
+  .skip-forward {
+    margin-top: 15px;
+  }
+  .skip-backward {
     margin-top: 15px;
   }
 
@@ -79,12 +98,72 @@
     left: 0;
     right: 0;
     margin: auto;
-    border: solid 4px #FFFFFF;
+    border: solid 3px #FFFFFF;
+    //box-shadow: inset 0px 0px 4px 2px #ffffff83;
     height: 60px;
     width: 60px;
     border-radius: 100px;
     &.play i{
       padding-left: 4px;
+    }
+  }
+  .repeat-button{
+    margin-top: 15px;
+    margin-right: 10px;
+    @include breakpoint(xs) {
+      display: none;
+    };
+    i{
+      @media all and (max-height: 500px) {
+        padding-top: 10px;
+      }
+    }
+
+    .fa {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    &:hover{
+      color: inherit;
+    }
+    &:active{
+      color: inherit;
+    }
+    &.active{
+      .fa {
+        color: $theme-link-hover-color;
+      }      
+    }
+  }
+
+  #shuffle-button{
+    margin-top: 15px;
+    margin-left: 10px;
+    @include breakpoint(xs) {
+      display: none;
+    };
+    i{
+      @media all and (max-height: 500px) {
+        padding-top: 10px;
+      }
+    }
+
+    .fa {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    &:hover{
+      color: inherit;
+    }
+    &:active{
+      color: inherit;
+    }
+    &.active{
+      .fa {
+        color: $theme-link-hover-color;
+      }
     }
   }
 }

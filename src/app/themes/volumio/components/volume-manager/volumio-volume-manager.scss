@@ -13,17 +13,20 @@
     .volumeSliderWrapper {
       pointer-events: none;
       position: absolute;
-      bottom: $footerHeight;
+      bottom: 0px;
       left: -15px;
       width: 80px;
       border-radius: 15px;
       background-color: $theme-transparent-buttons-background;
       text-align: center;
-      z-index: 2;
+      z-index: 10;
       .volumeSlider {
         pointer-events: auto;
-        margin: 14px 0px;
+        margin: 12px 0px;
         transform: rotate(0deg);
+        .slider-handle {
+          margin-left: -4px !important;          
+        }
       }
       button {
         pointer-events: auto;
@@ -44,5 +47,6 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 1;
+  right:40px;
+  z-index: -1;
 }

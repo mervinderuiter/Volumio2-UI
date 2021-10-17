@@ -1,12 +1,18 @@
 #trackInfo {
-  @include make-xs-column(24);
-  // border: solid 1px #999;
   text-align: left;
-  margin-top: 80px;
+  margin-top: 110px;
+  padding-left: 25px;
+  @include breakpoint(lg) {
+    padding-left: 50px;
+  }
+  @media all and (max-height: 750px) {
+    margin-top: 50px;
+  }
   @include breakpoint(xs) {
     margin-top: 20px;
     text-align: center;
     height: 100%;
+    padding-left: 0px;
   }
 }
 
@@ -15,7 +21,10 @@
   margin-top: 0px;  
   display: block;
   float: left;
-  width: calc(100vw - 180px);
+  width: calc(100vw - 205px);  
+  @include breakpoint(xs) {
+    width: calc(100vw - 180px);
+  };
   height: 80px;
   padding-left: 2px;
   padding-right: 2px;
@@ -38,11 +47,17 @@
 
 #trackInfo-title {
   font-size: 24px;
+  @media all and (max-height: 750px) {
+    font-size: 20px;
+  }
   font-weight: 700;
   display: inline-block;  
   @include breakpoint(lg) {
     font-size: 28px;
   }
+  @include breakpoint(xs) {
+    font-size: 20px;
+  };
 }
 #trackInfo-artist.mini {
   margin-top: 0px;
@@ -55,38 +70,42 @@
 
 #trackInfo-artist {  
   margin-top: 14px;
-  font-size: 20px;
+  font-size: 22px;
+  @media all and (max-height: 750px) {
+    font-size: 18px;
+  }
   display: inline-block;
   @include breakpoint(xs) {
     margin-top: 10px;
+    font-size: 18px;
   }
 }
 
 #trackInfo-samplerate.mini {
   margin-top: 6px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 100;
   display: block;
   width: calc(100vw - 180px);
   text-align: left;
   white-space: nowrap;
   img {
-    height: 16px;
+    height: 14px;
   }
 }
 
 #trackInfo-samplerate {
-  margin-top: 60px;
-  font-size: 18px;
+  margin-top: 10px;
+  font-size: 14px;
   font-weight: 100;
   img {
-    height: 20px;
+    height: 16px;
     margin-right: 10px;
   }
   @include breakpoint(xs) {
     margin-top: 5px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     img {
       height: 12px;
       margin-right: 10px;
