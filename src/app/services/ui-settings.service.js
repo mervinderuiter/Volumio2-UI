@@ -126,7 +126,7 @@ class UiSettingsService {
 
       this.$log.debug('pushUiSettings', this.uiSettings);
       this.setLanguage();
-      this.setBackground();
+      //this.setBackground();
       this.setLoadingBar();
       this.statisticsService.initStats();
     });
@@ -139,7 +139,7 @@ class UiSettingsService {
           background.thumbnail = `${this.socketService.host}/backgrounds/${background.thumbnail}`;
           return background;
         });
-      this.setBackground();
+      //this.setBackground();
     });
 
     this.socketService.on('pushWizard', (data) => {

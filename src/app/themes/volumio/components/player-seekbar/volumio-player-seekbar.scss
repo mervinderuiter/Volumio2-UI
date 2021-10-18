@@ -50,10 +50,6 @@
   margin-left:50px;
   margin-right: 50px;
   margin-bottom: 5px;
-  @media all and (max-height: 670px) {
-    margin-bottom: 0px;
-    margin-top: 5px;
-  }
 
   @include breakpoint(xs) {
     margin-left:0px;

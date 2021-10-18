@@ -5,8 +5,11 @@
   @include breakpoint(lg) {
     padding-left: 50px;
   }
-  @media all and (max-height: 750px) {
-    margin-top: 50px;
+  @media all and (max-height: 720px) {
+    margin-top: 85px;
+  }
+  @media all and (max-height: 480px) {
+    margin-top: 65px;
   }
   @include breakpoint(xs) {
     margin-top: 20px;

@@ -2,8 +2,11 @@
   text-align: right;
   margin-top: 90px;
   padding-right: 25px;
-  @media all and (max-height: 750px) {
-    margin-top: 30px;
+  @media all and (max-height: 720px) {
+    margin-top: 70px;
+  }
+  @media all and (max-height: 480px) {
+    margin-top: 45px;
   }
 
   @include breakpoint(lg) {
@@ -23,20 +26,29 @@
     //border: 10px solid rgba(0,0,0,0.5);
     border-radius: 15px;
     @include breakpoint(lg) {
-      max-width: 600px;
-      max-height: 600px;
+      max-width: 550px;
+      max-height: 550px;
     }
-    @include breakpoint(xs) {
-      max-width: 400px;
-      max-height: 400px;
+    @media all and (max-height: 720px) {
+      max-width: 420px;
+      max-height: 420px;
     }
-    @media all and (max-height: 750px) {
-      max-width: 375px;
-      max-height: 375px;
+    @media all and (max-height: 600px) {
+      max-width: 320px;
+      max-height: 320px;
     }
     @media all and (max-height: 500px) {
       max-width: 230px;
       max-height: 230px;
+    }
+    @media all and (max-height: 380px) {
+      max-width: 180px;
+      max-height: 180px;
+    }
+    @include breakpoint(xs) {
+      width:90%;
+      max-width: 350px;
+      max-height: 350px;
     }
   };
 }
