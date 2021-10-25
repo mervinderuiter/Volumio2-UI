@@ -65,7 +65,6 @@
           ng-if="playerButtons.playerService.state.status === 'play' && playerButtons.playerService.state.trackType !== 'webradio'"
           ng-click="playerButtons.playerService.pause()"
           class="btn btn-link playPause"
-          ng-class="{active: playerButtons.playerService.state.status === 'play' && playerButtons.state.current.url === 'playback'}"
           title="{{'BROWSER.PAUSE' | translate}}"
           ng-disabled="playerButtons.playerService.state.disableUi">
         <i class="fa fa-pause"></i>
